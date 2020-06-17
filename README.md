@@ -18,7 +18,7 @@ Files added
 
 Diff of xv6-public and modified repo
 
-```
+```c
 lenovo@prajwal:~/OS/git$ diff xv6-public/ xv6-submission/
 Only in xv6-submission/: copylseek.c
 Common subdirectories: xv6-public/.git and xv6-submission/.git
