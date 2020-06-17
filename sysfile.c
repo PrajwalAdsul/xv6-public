@@ -442,3 +442,39 @@ sys_pipe(void)
   fd[1] = fd1;
   return 0;
 }
+
+int
+sys_lseek(void) {
+  int offset;
+  struct file *fd;
+
+  // validating arg
+  if(argfd(0, 0, &fd) < 0)
+    return -1;
+  if(argint(1, &offset) < 0)
+    return -1;
+
+  // lock the inode pointer before using it
+  ilock(fd->ip);
+  // if offset is going beyond file size then return -1
+  // indicating a terminal condition
+  if(fd->off + offset >= fd->ip->size)
+  {
+    // unlock the inode pointer before returning
+    iunlock(fd->ip);
+    return -1;
+  }
+  // unlock the inode pointer before,
+  // as we don't need if further in the program 
+  iunlock(fd->ip);
+
+  // can't going on negative scale
+  if(fd -> off + offset < 0)
+    return -1;
+
+  // increment the offset 
+  fd->off = fd->off + offset;
+
+  // return the new offset
+  return fd->off;
+}
