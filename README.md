@@ -1,21 +1,23 @@
-# xv6
+# Adding lseek sys call to xv6
 Name - Prajwal Adsul
+
 MIS - 111703046
 
 Added lseek system call to xv6
 
 Files changed
-![MakeFile](https://github.com/PrajwalAdsul/xv6-public/blob/prajwal/Makefile)
-![user.h](https://github.com/PrajwalAdsul/xv6-public/blob/prajwal/user.h)
-![syscall.h](https://github.com/PrajwalAdsul/xv6-public/blob/prajwal/syscall.h)
-![syscall.c](https://github.com/PrajwalAdsul/xv6-public/blob/prajwal/syscall.c)
-![sysfile.c](https://github.com/PrajwalAdsul/xv6-public/blob/prajwal/sysfile.c)
+![MakeFile](https://github.com/PrajwalAdsul/xv6-public/blob/master/Makefile)
+![user.h](https://github.com/PrajwalAdsul/xv6-public/blob/master/user.h)
+![syscall.h](https://github.com/PrajwalAdsul/xv6-public/blob/master/syscall.h)
+![syscall.c](https://github.com/PrajwalAdsul/xv6-public/blob/master/syscall.c)
+![sysfile.c](https://github.com/PrajwalAdsul/xv6-public/blob/master/sysfile.c)
 
 Files added
-![readlseek.c](https://github.com/PrajwalAdsul/xv6-public/blob/prajwal/readlseek.c)
-![copylseek.c](https://github.com/PrajwalAdsul/xv6-public/blob/prajwal/copylseek.c)
+![readlseek.c](https://github.com/PrajwalAdsul/xv6-public/blob/master/readlseek.c)
+![copylseek.c](https://github.com/PrajwalAdsul/xv6-public/blob/master/copylseek.c)
 
 Diff of xv6-public and modified repo
+
 ```
 lenovo@prajwal:~/OS/git$ diff xv6-public/ xv6-submission/
 Only in xv6-submission/: copylseek.c
